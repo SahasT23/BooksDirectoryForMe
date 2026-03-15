@@ -3,161 +3,286 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Social Workers Forum</title>
+<title>Silverline</title>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f6f8;
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background:#fff7cc;
 }
 
-header {
-    background-color: #2c6e91;
-    color: white;
-    padding: 20px;
-    text-align: center;
+/* NAVBAR */
+
+.navbar{
+    background:#7a6ccf;
+    color:white;
+    padding:14px 22px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-nav {
-    background-color: #1f4e69;
-    padding: 10px;
-    text-align: center;
+.logo{
+    font-weight:bold;
+    font-size:18px;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+.search input{
+    padding:8px 14px;
+    border-radius:20px;
+    border:none;
+    width:260px;
 }
 
-nav a:hover {
-    text-decoration: underline;
+/* COMMUNITY BANNER */
+
+.banner{
+    background:#b9a9ff;
+    padding:30px;
+    color:white;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
+.banner h1{
+    margin:0;
 }
 
-.category {
-    background: white;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 6px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+.banner p{
+    margin-top:6px;
+    opacity:0.9;
 }
 
-.category h2 {
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 8px;
+/* MAIN LAYOUT */
+
+.layout{
+    width:1100px;
+    margin:20px auto;
+    display:flex;
+    gap:20px;
 }
 
-.thread {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
+/* POST FEED */
+
+.feed{
+    flex:3;
 }
 
-.thread:last-child {
-    border-bottom: none;
+/* SIDEBAR */
+
+.sidebar{
+    flex:1;
 }
 
-.thread-title {
-    color: #2c6e91;
-    font-weight: bold;
+/* POST COMPOSER */
+
+.composer{
+    background:white;
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:16px;
+    display:flex;
+    gap:10px;
+    align-items:center;
 }
 
-.thread-info {
-    color: #777;
-    font-size: 0.9em;
+.composer input{
+    flex:1;
+    padding:10px;
+    border-radius:20px;
+    border:1px solid #ddd;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    text-align: center;
-    background-color: #1f4e69;
-    color: white;
+/* POSTS */
+
+.post{
+    display:flex;
+    background:white;
+    border-radius:10px;
+    margin-bottom:12px;
+    box-shadow:0 1px 3px rgba(0,0,0,0.1);
 }
+
+/* VOTE COLUMN */
+
+.vote{
+    width:50px;
+    background:#e0d178;
+    text-align:center;
+    padding-top:10px;
+    border-top-left-radius:10px;
+    border-bottom-left-radius:10px;
+}
+
+.vote button{
+    border:none;
+    background:none;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.score{
+    font-weight:bold;
+    margin:6px 0;
+}
+
+/* POST CONTENT */
+
+.post-content{
+    padding:14px;
+}
+
+.post-title{
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.post-meta{
+    font-size:13px;
+    color:#777;
+}
+
+/* TAGS */
+
+.tag{
+    display:inline-block;
+    background:#ece8ff;
+    color:#5748c8;
+    padding:4px 10px;
+    border-radius:15px;
+    font-size:12px;
+    margin-right:6px;
+}
+
+/* SIDEBAR CARDS */
+
+.side-card{
+    background:white;
+    border-radius:10px;
+    padding:16px;
+    margin-bottom:14px;
+}
+
+.side-card h3{
+    margin-top:0;
+}
+
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Social Workers Community Forum</h1>
-<p>A place to share knowledge, support, and resources</p>
-</header>
+<div class="navbar">
 
-<nav>
-<a href="#">Home</a>
-<a href="#">Categories</a>
-<a href="#">Resources</a>
-<a href="#">Members</a>
-<a href="#">Login</a>
-</nav>
+<div class="logo">Silverline</div>
 
-<div class="container">
-
-<div class="category">
-<h2>General Discussion</h2>
-
-<div class="thread">
-<span class="thread-title">Advice for new social workers</span>
-<span class="thread-info">15 replies | Last post: 2h ago</span>
+<div class="search">
+<input placeholder="Search discussions">
 </div>
 
-<div class="thread">
-<span class="thread-title">Managing work-life balance</span>
-<span class="thread-info">8 replies | Last post: 1 day ago</span>
-</div>
-
-<div class="thread">
-<span class="thread-title">Best tools for case management</span>
-<span class="thread-info">12 replies | Last post: 3 days ago</span>
-</div>
+<div>Login</div>
 
 </div>
 
-<div class="category">
-<h2>Child & Family Services</h2>
 
-<div class="thread">
-<span class="thread-title">Supporting foster families</span>
-<span class="thread-info">6 replies | Last post: 5h ago</span>
-</div>
+<div class="banner">
 
-<div class="thread">
-<span class="thread-title">Handling difficult family meetings</span>
-<span class="thread-info">10 replies | Last post: 2 days ago</span>
-</div>
+<h1>Silverline Community</h1>
+<p>A safe space to share advice, resources, and professional support</p>
 
 </div>
 
-<div class="category">
-<h2>Mental Health & Wellbeing</h2>
 
-<div class="thread">
-<span class="thread-title">Preventing burnout in social work</span>
-<span class="thread-info">21 replies | Last post: 4h ago</span>
+<div class="layout">
+
+
+<div class="feed">
+
+<div class="composer">
+<input placeholder="Create a post...">
 </div>
 
-<div class="thread">
-<span class="thread-title">Self-care routines that work</span>
-<span class="thread-info">9 replies | Last post: 1 week ago</span>
+
+<div class="post">
+
+<div class="vote">
+<button>▲</button>
+<div class="score">42</div>
+<button>▼</button>
 </div>
+
+<div class="post-content">
+<div class="post-title">Advice for new social workers entering the field</div>
+<div class="post-meta">Posted by Sarah • 3 hours ago</div>
+
+<span class="tag">Career</span>
+<span class="tag">Advice</span>
 
 </div>
 
 </div>
 
-<footer>
-<p>© 2026 Social Workers Forum | Supporting professionals worldwide</p>
-</footer>
+
+<div class="post">
+
+<div class="vote">
+<button>▲</button>
+<div class="score">19</div>
+<button>▼</button>
+</div>
+
+<div class="post-content">
+<div class="post-title">How do you prevent burnout?</div>
+<div class="post-meta">Posted by James • 1 day ago</div>
+
+<span class="tag">Mental Health</span>
+
+</div>
+
+</div>
+
+
+<div class="post">
+
+<div class="vote">
+<button>▲</button>
+<div class="score">27</div>
+<button>▼</button>
+</div>
+
+<div class="post-content">
+<div class="post-title">Best trauma-informed care training resources?</div>
+<div class="post-meta">Posted by Maria • 5 hours ago</div>
+
+<span class="tag">Training</span>
+<span class="tag">Resources</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="sidebar">
+
+<div class="side-card">
+<h3>About Community</h3>
+<p>A supportive forum where social workers can share knowledge, experiences, and resources.</p>
+</div>
+
+<div class="side-card">
+<h3>Topics</h3>
+<p>Career Advice</p>
+<p>Mental Health Practice</p>
+<p>Child & Family Services</p>
+<p>Professional Development</p>
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
